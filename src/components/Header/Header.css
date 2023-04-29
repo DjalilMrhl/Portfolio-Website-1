@@ -1,0 +1,92 @@
+header {
+  min-height: 100vh;
+  padding-top: 3rem;
+}
+@media (min-height: 1000px) {
+  header {
+    min-height: 70vh;
+  }
+}
+header .header--container {
+  position: relative;
+  height: 100%;
+  isolation: isolate;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+header .header--container h1, header .header--container h5 {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+header .header--container .text-light {
+  margin-bottom: 2rem;
+}
+header .header--container .btns {
+  display: flex;
+  gap: 1em;
+}
+header .header--container .image--container {
+  overflow: hidden;
+  width: min(90%, 300px);
+  margin-top: 3em;
+  background-image: linear-gradient(to bottom, var(--clr-primary), transparent);
+  border-top-right-radius: 10rem;
+  border-top-left-radius: 10rem;
+  box-shadow: 0 7px 5px var(--clr-bg);
+  padding: 1.5rem 1rem 0;
+}
+@media screen and (max-width: 600px) {
+  header .header--container .image--container {
+    margin-top: 5em;
+  }
+}
+header .header--container .image--container img {
+  width: 90%;
+}
+header .header--container .links {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  bottom: 0;
+  color: var(--clr-primary);
+}
+@media screen and (max-width: 600px) {
+  header .header--container .links {
+    display: none;
+  }
+}
+header .header--container .links a {
+  transition: var(--transition);
+}
+header .header--container .links a:hover {
+  color: var(--clr-white);
+}
+header .header--container .links span {
+  width: 2px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: var(--clr-primary-variant);
+}
+header .header--container > a {
+  font-size: 0.9rem;
+  position: absolute;
+  right: -2.3rem;
+  bottom: 50px;
+  transform: rotate(90deg);
+  color: var(--clr-primary-variant);
+  cursor: pointer;
+  transition: var(--transition);
+}
+header .header--container > a:hover {
+  color: var(--clr-light);
+}
+@media screen and (max-width: 600px) {
+  header .header--container > a {
+    display: none;
+  }
+}/*# sourceMappingURL=Header.css.map */

@@ -1,0 +1,93 @@
+.about {
+    min-height: 100vh;
+    @media (min-height: 1000px) {
+        min-height: 70vh;
+    }
+    &--container {
+        isolation: isolate;
+        min-height: 500px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
+        place-items: center;
+        gap: 1em;
+        @media (max-width: 400px) {
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        }
+        .image--container {
+            position: relative;
+            &:hover img{
+                transform: rotate(0deg);
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 93%;
+                height: 70%;
+                border-radius: 25px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: linear-gradient(45deg, transparent, var(--clr-primary) 80%, transparent);
+                z-index: -1;
+            }
+            img {
+                height: 120%;
+                border-radius: 25px;
+                transform: rotate(-10deg);
+                transition: var(--transition);
+            }
+        }
+        .description--container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            row-gap: 2em;
+            @media (max-width: 879px) {
+                align-items: center;
+            }
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 2em;
+                @media (max-width: 330px) {
+                    column-gap: .7em;
+                }
+                .card {
+                    cursor: default;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1em;
+                    background-color: var(--clr-bg-variant);
+                    border: 1px solid transparent;
+                    padding: 1em 0.5em;
+                    border-radius: 10px;
+                    transition: var(--transition);
+                    @media (max-width: 330px) {
+                        row-gap: .3em;
+                        padding-block: .5em;
+                    }
+                    &:hover {
+                        background-color: transparent;
+                        border-color: var(--clr-primary-variant);
+                    }
+                    .i {
+                        font-size: 1.2rem;
+                        color: var(--clr-primary);
+                    }
+                    p {
+                        text-align: center;
+                        font-size: .7rem;
+                    }
+                }
+            }
+            > p {
+                font-size: clamp(.8rem, 4vw, 1rem);
+                @media (max-width: 879px) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

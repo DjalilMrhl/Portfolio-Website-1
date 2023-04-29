@@ -1,0 +1,15 @@
+.pretitle {
+  grid-column: 1/-1;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pretitle--container h1 {
+  color: var(--clr-primary);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.pretitle--container h5 {
+  font-weight: 400;
+}/*# sourceMappingURL=Pretitle.css.map */

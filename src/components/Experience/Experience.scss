@@ -1,0 +1,79 @@
+.experience {
+    min-height: 80vh;
+    margin-top: 2rem;
+    @media (min-height: 1000px) {
+        min-height: 50vh;
+    }
+    &--container {
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+        align-items: flex-start;
+        gap: 2em 1em;
+        text-transform: capitalize;
+        @media (max-width: 725px) {
+            width: 80%;
+            margin-inline: auto;
+        }
+        @media (max-width: 600px) {
+            grid-template-columns: 100%;
+        }
+        .front-end, .back-end {
+            min-height: 300px;
+            align-self: stretch;
+            padding: 1em 2em 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px 1fr;
+            align-items: center;
+            gap: 2em;
+            border: 1px solid transparent;
+            border-radius: 25px;
+            background-color: var(--clr-bg-variant);
+            cursor: default;
+            transition: var(--transition);
+            &:hover {
+                background-color: transparent;
+                border-color: var(--clr-primary-variant);
+            }
+            h3 {
+                font-size: clamp(.9rem, 4vw, 1.1rem);
+                font-weight: 400;
+                color: var(--clr-primary);
+                justify-self: center;
+            }
+            ul {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                column-gap: 2em;
+                @media (max-width: 739px) {
+                    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                }
+                @media (max-width: 524px) {
+                    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+                }
+                @media (max-width: 441px) {
+                    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                }
+                @media (max-width: 386px) {
+                    padding-left: 3rem;
+                }
+                li {
+                    position: relative;
+                    .i {
+                        position: absolute;
+                        left: 0;
+                        transform: translate(-150%, 50%);
+                        color: var(--clr-primary);
+                    }
+                    span {
+                    display: block;
+                    font-size: .5rem;
+                    margin-bottom: 1rem;
+                    color: var(--clr-light);
+                    }
+                }
+            }
+        }
+    }
+}

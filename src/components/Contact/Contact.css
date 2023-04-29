@@ -1,0 +1,110 @@
+.contact {
+  margin-top: 2rem;
+  min-height: 100vh;
+}
+@media (min-height: 1000px) {
+  .contact {
+    min-height: 70vh;
+  }
+}
+@media (max-width: 600px) {
+  .contact {
+    margin-top: 4rem;
+  }
+}
+.contact--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4em;
+}
+@media (max-width: 792px) {
+  .contact--container {
+    display: block;
+  }
+}
+.contact--container .links {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: flex-end;
+  row-gap: 1rem;
+}
+@media (max-width: 792px) {
+  .contact--container .links {
+    justify-items: center;
+    margin-bottom: 2rem;
+  }
+}
+.contact--container .links > div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  border: 1px solid transparent;
+  background-color: var(--clr-bg-variant);
+  border-radius: 15px;
+  transition: var(--transition);
+}
+@media (max-width: 792px) {
+  .contact--container .links > div {
+    width: 80%;
+  }
+}
+.contact--container .links > div:hover {
+  background-color: transparent;
+  border-color: var(--clr-primary-variant);
+}
+.contact--container .links > div .i {
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;
+}
+.contact--container .links > div h5 {
+  text-transform: capitalize;
+  margin-bottom: 0.2em;
+}
+.contact--container .links > div p {
+  font-size: 0.8rem;
+  color: var(--clr-light);
+  margin-bottom: 0.7em;
+}
+.contact--container .links > div a {
+  font-size: 0.7rem;
+  color: var(--clr-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.contact--container .links > div a:hover {
+  color: var(--clr-white);
+}
+.contact--container form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+@media (max-width: 792px) {
+  .contact--container form {
+    width: 90%;
+    margin: auto;
+  }
+}
+.contact--container form input, .contact--container form textarea {
+  resize: none;
+  padding: 1.5em 1em;
+  background-color: transparent;
+  border: 1px solid var(--clr-primary-variant);
+  border-radius: 10px;
+  color: var(--clr-white);
+}
+.contact--container form input::-moz-placeholder, .contact--container form textarea::-moz-placeholder {
+  color: var(--clr-light);
+  text-transform: capitalize;
+}
+.contact--container form input::placeholder, .contact--container form textarea::placeholder {
+  color: var(--clr-light);
+  text-transform: capitalize;
+}
+.contact--container form input:focus, .contact--container form textarea:focus {
+  outline: none;
+}/*# sourceMappingURL=Contact.css.map */

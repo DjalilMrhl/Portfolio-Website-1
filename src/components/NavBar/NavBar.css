@@ -1,0 +1,40 @@
+nav {
+  width: min(90%, 300px);
+  padding: 0.5em;
+  height: 60px;
+  margin-inline: auto;
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  background-color: rgba(17, 25, 45, 0.3019607843);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul a {
+  font-size: clamp(0.6rem, 5vw, 1rem);
+  padding: 0.7rem;
+  aspect-ratio: 1/1;
+  color: var(--clr-primary);
+  transition: var(--transition);
+}
+nav ul a:hover {
+  border-radius: 50%;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+nav ul a.active {
+  border-radius: 50%;
+  background-color: var(--clr-bg);
+  color: var(--clr-white);
+}/*# sourceMappingURL=NavBar.css.map */
