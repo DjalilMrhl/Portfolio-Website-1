@@ -11,8 +11,11 @@
         align-items: flex-start;
         gap: 2em 1em;
         text-transform: capitalize;
+        @media (min-width: 1950px) {
+            grid-template-columns: repeat(auto-fit,minmax(700px,1fr));
+        }
         @media (min-width: 1323px) {
-            grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
+            grid-template-columns: repeat(auto-fit,minmax(485px,1fr));
         }
         @media (max-width: 725px) {
             width: 80%;
