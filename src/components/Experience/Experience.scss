@@ -7,10 +7,13 @@
     &--container {
         margin-inline: auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
         align-items: flex-start;
         gap: 2em 1em;
         text-transform: capitalize;
+        @media (min-width: 1323px) {
+            grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
+        }
         @media (max-width: 725px) {
             width: 80%;
             margin-inline: auto;
